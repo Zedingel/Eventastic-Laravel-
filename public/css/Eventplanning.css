@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: #eee;
+}
+
+header {
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 5px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #311003;
+    padding: 0px;
+    display: inline-block;
+    transition: all ease 0.3s;
+    font-size: 13px;
+}
+
+header ul li a:hover {
+    color: #d6582a;
+}
+
+.active {
+    background-color: #aa320ae3;
+    height: 30px;
+    font-size: small;
+    border-radius: 19px;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    color: white;
+}
+
+header ul .dropdown {
+    position: absolute;
+    width: 170px;
+    background-color: #743a05ab;
+    box-shadow: 0 25px 45px rgba(129, 12, 12, 0.753);
+    margin-top: 100px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+    border-radius: 10px;
+}
+
+header ul li:hover .dropdown {
+    z-index: 99;
+    opacity: 2;
+    margin-top: 0px;
+}
+header .logo a{
+    text-decoration: none;
+    color: #d6582a;
+    font-size: 1re;
+}
+.descBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    overflow-x: hidden;
+    margin: 0.5em;
+    width: 90%;
+}
+
+.descImg img {
+    height: 20em;
+    width: 29em;
+    border-radius: 1em;
+}
+
+.desctext {
+    margin: 1em;
+    width: 90%;
+    padding: 1em;
+}
+
+.desctext h1 {
+    text-align: center;
+    margin: 1em;
+    font-size: 200%;
+}
+
+.desctext h2 {
+    text-align: center;
+}
+
+.gal {
+    border: 0.3em solid #ff5100;
+    margin-top: 5em;
+    border-radius: 2em;
+    background-color: black;
+}
+
+.gal a {
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 1em;
+    display: block;
+    color: white;
+    font-size: 1.3em;
+}
+
+.gal:hover {
+    background: gray;
+    font-weight: bolder;
+}
+
+.gal:hover a {
+    color: #000;
+    font-size: 1.4em;
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 5em;
+    background-color: #111;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    height: 3.3em;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 2em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    font-size: 2.3em;
+}
+
+.foootercontact,
+.foootercontact a {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.foootercontact a {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: white;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+    font-size: 1rem;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1024px) {
+    .descBox {
+        flex-direction: column; /* Stack images and text vertically on medium screens */
+    }
+
+    .descImg img {
+        width: 100%; /* Make images responsive */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .descBox {
+        flex-direction: column; /* Ensure stacking for smaller screens */
+    }
+
+    .descImg img {
+        width: 100%; /* Adjust images for smaller screens */
+        height: auto;
+    }
+
+    .desctext h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .desctext h2 {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .descBox {
+        flex-direction: column; /* Ensure stacking for very small screens */
+    }
+
+    .descImg img {
+        width: 100%; /* Adjust images for very small screens */
+        height: auto;
+    }
+
+    .desctext h1 {
+        font-size: 1.2em; /* Adjust font size for very small screens */
+    }
+
+    .desctext h2 {
+        font-size: 0.9em; /* Adjust font size for very small screens */
+    }
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+/* Customize the scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 1.1em; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000000; /* Set the background color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d34706c7; /* Set the color of the scroll thumb */
+    border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff5100; /* Set the color of the scroll thumb on hover */
+    border-radius: 1.3em;
+}
